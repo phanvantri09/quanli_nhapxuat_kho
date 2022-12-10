@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\adminController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +17,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
+Auth::routes();
+Route::get('admin/home', [adminController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');

@@ -122,6 +122,79 @@
                         </div>
                     </div>
 
+                    @guest
+                                @if (Route::has('login'))
+                                    <div class="header-btn d-none f-right d-lg-block">
+                                        <a href="{{ route('register') }}" class="btn head-btn1">Đăng Ký</a>
+                                        <a href="{{ route('login') }}" class="btn head-btn2">Đăng Nhập</a>
+                                    </div>
+                                @endif
+                            @else
+                                <div class="main-menu">
+                                    <nav class="d-none d-lg-block">
+                                        <ul id="navigation">
+                                            @if (Auth::user()->is_admin == 0)
+                                                {{-- usser --}}
+                                                <li><a href=""> <img src="{{ asset('admin/images/profile/pic1.jpg') }}"
+                                                            width="40" alt=""> {{ Auth::user()->name }}</a>
+                                                    <ul class="submenu">
+                                                       
+                                                        <li>
+                                                            <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
+                                                                <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg"
+                                                                    class="text-danger" width="18" height="18"
+                                                                    viewbox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                    stroke-width="2" stroke-linecap="round"
+                                                                    stroke-linejoin="round">
+                                                                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4">
+                                                                    </path>
+                                                                    <polyline points="16 17 21 12 16 7"></polyline>
+                                                                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                                                                </svg>
+                                                                <span>
+                                                                    {{ __('Logout') }}
+                                                                </span>
+                                                                <form id="logout-form" action="{{ route('logout') }}"
+                                                                    method="POST" class="d-none">
+                                                                    @csrf
+                                                                </form>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            @elseif(Auth::user()->is_admin == 2)
+                                                {{-- nhaf tuyeern dung --}}
+                                                <li><a href=""> <img src="{{ asset('admin/images/profile/pic1.jpg') }}"
+                                                            width="40" alt=""> {{ Auth::user()->name }}</a>
+                                                    <ul class="submenu">
+                                                       
+                                                        <li>
+                                                            <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
+                                                                <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg"
+                                                                    class="text-danger" width="18" height="18"
+                                                                    viewbox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                    stroke-width="2" stroke-linecap="round"
+                                                                    stroke-linejoin="round">
+                                                                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4">
+                                                                    </path>
+                                                                    <polyline points="16 17 21 12 16 7"></polyline>
+                                                                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                                                                </svg>
+                                                                <span>
+                                                                    {{ __('Logout') }}
+                                                                </span>
+                                                                <form id="logout-form" action="{{ route('logout') }}"
+                                                                    method="POST" class="d-none">
+                                                                    @csrf
+                                                                </form>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            @endif
+                                            @endguest
                     <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                     </div>
