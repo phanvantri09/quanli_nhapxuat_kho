@@ -4,6 +4,9 @@ use App\Http\Controllers\adminController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
+// trí add
+use App\Http\Controllers\TKController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +23,10 @@ Route::get('/', function () {
 })->name('home');
 Auth::routes();
 Route::get('admin/home', [adminController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
+Route::prefix('thukho')->group(function () {
+    Route::get('/', [TKController::class, 'home'])->name("thukho");
+    Route::get('them', [TKController::class, 'add'])->name("thukho.add");
+    Route::post('them', [TKController::class, 'addpost'])->name("thukho.addPost");
+    Route::get('sua/{id}', [TKController::class, 'edit'])->name("thukho.edit");
+    Route::post('sua', [TKController::class, 'editPost'])->name("thukho.editPost");
+});

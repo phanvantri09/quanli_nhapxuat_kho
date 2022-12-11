@@ -17,13 +17,12 @@ class Product extends Migration
             $table->id();
             $table->string('name');//tên sản phẩm
             $table->string('code');// Mã sp
+            $table->integer('id_user_cc');// id người thêm sản phẩm
             $table->integer('amount');// số lượng
             $table->integer('price'); //giá tiền
             $table->string('size');// list các size implode
             $table->string('color');//list các màu implode
             $table->integer('status')->default(1); //trạng thái sp : mới tạo thì là 1 , chuyển san hàng tồn thì 2
-            $table->timestamp('email_verified_at')->nullable();
-            $table->rememberToken();
             $table->timestamps();
         });
     }
