@@ -29,4 +29,11 @@ Route::prefix('thukho')->group(function () {
     Route::post('them', [TKController::class, 'addpost'])->name("thukho.addPost");
     Route::get('sua/{id}', [TKController::class, 'edit'])->name("thukho.edit");
     Route::post('sua', [TKController::class, 'editPost'])->name("thukho.editPost");
+    Route::get('delete/{id}', [TKController::class, 'delete'])->name("thukho.delete");
+
+
+    Route::get('xuat', [TKController::class, 'xuat'])->name("thukho.xuat.add");
+    Route::get('xuat_by_id/{id}', [TKController::class, 'xuat_by_id'])->name("thukho.xuat_by_id.add");
+    Route::post('xuatPost', [TKController::class, 'xuatPost'])->name("thukho.xuat.addPost");
+
 });

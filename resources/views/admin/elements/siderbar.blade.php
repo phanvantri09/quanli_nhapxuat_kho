@@ -77,8 +77,8 @@
                     <span class="nav-text">Kho</span>
                 </a>
                 <ul aria-expanded="false" class="mm-collapse mm-show">
-                    <li><a href="form-element.html">Danh sách nhập kho</a></li>
-                    <li><a href="form-wizard.html">Danh sách xuất kho</a></li>
+                    <li><a href="{{ route('thukho') }}">Danh sách nhập kho</a></li>
+
                 </ul>
             </li>
 
