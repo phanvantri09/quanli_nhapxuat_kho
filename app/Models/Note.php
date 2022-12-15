@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+use App\Models\Product;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -17,5 +17,10 @@ class Note extends Model
             $result = "xuat".rand(1000,9999);
         }
         return $result;
+    }
+    public function product()
+    {
+        // dd($this->hasOne(Product::class,'id_product','id'));
+        return $this->hasOne(Product::class,'id','id_product');
     }
 }

@@ -4,7 +4,7 @@
     Name                 : Dompet
     Author               : Dexignlabs
     Author Portfolio     : https://themeforest.net/user/dexignlabs/portfolio
-    
+
 
 
     Table of Sass Contents
@@ -16,7 +16,7 @@
         _mixin
         _variable
 
-    2. bootstrap 
+    2. bootstrap
         -Here goes all official bootstrap scss files
 
     3. Global/Base
@@ -8849,20 +8849,6 @@ label {
   20% {
     transform: translateY(-20px); } }
 
-#preloader {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 99999;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  background-color: #fff; }
-
-[data-theme-version="dark"] #preloader {
-  background: #171622; }
 
 [data-theme-version="dark"] .waviy span {
   color: #fff; }
