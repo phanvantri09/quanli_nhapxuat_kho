@@ -54,7 +54,28 @@
                 </div>
             </li>
             @endguest
+            @if (Auth::user()->is_admin == 1)
 
+            <li><a class="has-arrow ai-icon" aria-expanded="false">
+                    <i class="flaticon-025-dashboard"></i>
+                    <span class="nav-text">Trang Chủ</span>
+                </a>
+
+
+            </li>
+            <li><a class="has-arrow ai-icon" aria-expanded="false">
+                    <i class="flaticon-025-dashboard"></i>
+                    <span class="nav-text">Quản Lý Nhân Viên</span>
+                </a>
+                <ul aria-expanded="false">
+                
+                    <li><a href="{{route('CheckUser.index')}}">Danh Sách</a></li>
+
+                </ul>
+
+            </li>
+
+            @endif
 
             @if (Auth::user()->is_admin == 2)
 
@@ -65,20 +86,25 @@
 
 
             </li>
-           
+
             @endif
 
 
             @if (Auth::user()->is_admin == 3)
 
             <li><a class="has-arrow ai-icon" aria-expanded="false">
-                    <i class="flaticon-025-dashboard"></i>
-                    <span class="nav-text"> thêm sp</span>
+                    <i class="flaticon-025-dashboard"> Sản Phẩm</i>
+                    <span class="nav-text"> </span>
                 </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{route('addproduct')}}"> Thêm </a></li>
+                    <li><a href="{{route('indexproduct')}}">Danh Sách</a></li>
 
+                </ul>
 
             </li>
-           
+
+          
             @endif
 
 
@@ -86,8 +112,7 @@
 
         </ul>
         <div class="copyright">
-            <p><strong> Phan Thị Thuận</strong> © 2022 </p>
-            <p class="fs-12"> Phan Thị Thuận <span class="heart"></span> Phan Thị Thuận</p>
+
         </div>
     </div>
 </div>

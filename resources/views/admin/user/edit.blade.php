@@ -49,14 +49,15 @@
                                                 <label class="col-sm-1 col-form-label">Quyền User </label>
                                                 <div class="col-lg-6">
                                                     <select class="default-select  form-control wide" name="is_admin">
-                                                        @if ($user->is_admin == 0)
-                                                            <option selected value="0"> Chưa Duyệt</option>
+                                                        @if ($user->is_admin == 2)
+                                                            <option selected value="1"> Chưa Duyệt</option>
                                                             <option value="2"> Đã Duyệt</option>
                                                         @endif
-                                                        @if ($user->is_admin == 2)
-                                                        <option value="0"> Chưa Duyệt</option>
-                                                        <option selected value="2"> Đã Duyệt</option>
+                                                        @if ($user->is_admin == 3)
+                                                        <option value="1"> Chưa Duyệt</option>
+                                                        <option selected value="3"> Đã Duyệt</option>
                                                         @endif
+                                                       
                                                       
 
                                                     </select>
