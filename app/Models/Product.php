@@ -10,6 +10,17 @@ class Product extends Model
 {
     use HasFactory;
     protected $table = "product";
+    protected $fillable = [ 
+        'id_user_cc',
+        'name',
+        'code',
+        'amount',
+        'price',
+        'size',
+        'color',
+       
+    ];
+
     public function note()
     {
         return $this->belongsTo(Note::class, 'id_product', 'id');
