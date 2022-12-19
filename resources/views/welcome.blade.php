@@ -133,12 +133,12 @@
                                 <div class="main-menu">
                                     <nav class="d-none d-lg-block">
                                         <ul id="navigation">
-                                            @if (Auth::user()->is_admin == 0)
+                                            @if (Auth::user()->level == 0)
                                                 {{-- usser --}}
                                                 <li><a href=""> <img src="{{ asset('admin/images/profile/pic1.jpg') }}"
                                                             width="40" alt=""> {{ Auth::user()->name }}</a>
                                                     <ul class="submenu">
-                                                       
+
                                                         <li>
                                                             <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
@@ -163,12 +163,12 @@
                                                         </li>
                                                     </ul>
                                                 </li>
-                                            @elseif(Auth::user()->is_admin == 2)
+                                            @elseif(Auth::user()->level == 2)
                                                 {{-- nhaf tuyeern dung --}}
                                                 <li><a href=""> <img src="{{ asset('admin/images/profile/pic1.jpg') }}"
                                                             width="40" alt=""> {{ Auth::user()->name }}</a>
                                                     <ul class="submenu">
-                                                       
+
                                                         <li>
                                                             <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">

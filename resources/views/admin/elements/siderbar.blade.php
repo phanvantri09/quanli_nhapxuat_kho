@@ -19,7 +19,7 @@
 
 
                             </b></span>
-                        <small class="text-end font-w400">admin@admin.com</small>
+                        <small class="text-end font-w400">{{ Auth::user()->email }}</small>
                     </div>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
@@ -77,7 +77,7 @@
 
             @endif
 
-            @if (Auth::user()->is_admin == 2)
+            @if (Auth::user()->level == 2)
 
             <li><a class="has-arrow ai-icon" aria-expanded="false">
                     <i class="flaticon-025-dashboard"></i>
@@ -90,7 +90,7 @@
             @endif
 
 
-            @if (Auth::user()->is_admin == 3)
+            @if (Auth::user()->level == 3)
 
             <li><a class="has-arrow ai-icon" aria-expanded="false">
                     <i class="flaticon-025-dashboard"> Sản Phẩm</i>
@@ -105,6 +105,17 @@
             </li>
 
           
+            <li>
+                <a href="" class="has-arrow ai-icon" aria-expanded="false">
+                    <i class="flaticon-025-dashboard"></i>
+                    <span class="nav-text">Kho</span>
+                </a>
+                <ul aria-expanded="false" class="mm-collapse mm-show">
+                    <li><a href="{{ route('thukho') }}">Danh sách nhập kho</a></li>
+
+                </ul>
+            </li>
+
             @endif
 
 

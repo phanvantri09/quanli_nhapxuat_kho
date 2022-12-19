@@ -13,11 +13,11 @@
 	<meta property="og:description" content="Dompet : Payment Admin Template">
 	<meta property="og:image" content="https://dompet.dexignlab.com/xhtml/social-image.png">
 	<meta name="format-detection" content="telephone=no">
-	
+
 	<!-- PAGE TITLE HERE -->
 	<title>Dompet : Payment Admin Template</title>
 	<link href="{{asset('admin/vendor/sweetalert2/dist/sweetalert2.min.css')}}" rel="stylesheet">
-		
+
 	<!-- FAVICONS ICON -->
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
     <link href="{{asset('admin/vendor/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
@@ -25,34 +25,12 @@
 	<link rel="stylesheet" href="{{asset('admin/vendor/nouislider/nouislider.min.css')}}">
 	<!-- Style css -->
     <link href="{{asset('admin/css/style.css')}}" rel="stylesheet">
-	
+
 </head>
 <body>
 
-    <!--*******************
-        Preloader start
-    ********************-->
-    <div id="preloader">
-        <div class="waviy">
-		   <span style="--i:1">L</span>
-		   <span style="--i:2">o</span>
-		   <span style="--i:3">a</span>
-		   <span style="--i:4">d</span>
-		   <span style="--i:5">i</span>
-		   <span style="--i:6">n</span>
-		   <span style="--i:7">g</span>
-		   <span style="--i:8">.</span>
-		   <span style="--i:9">.</span>
-		   <span style="--i:10">.</span>
-		</div>
-    </div>
-    <!--*******************
-        Preloader end
-    ********************-->
 
-    <!--**********************************
-        Main wrapper start
-    ***********************************-->
+    
     <div id="main-wrapper">
 
         <!--**********************************
@@ -86,7 +64,7 @@
 		<!--**********************************
             Chat box start
         ***********************************-->
-	
+
         <!--**********************************
             Header end ti-comment-alt
         ***********************************-->
@@ -94,30 +72,30 @@
         <!--**********************************
             Sidebar start
         ***********************************-->
-     
+
         <!--**********************************
             Sidebar end
         ***********************************-->
-		
+
 		<!--**********************************
             Content body start
         ***********************************-->
-        
+
         <!--**********************************
             Content body end
         ***********************************-->
-		
-		
-		
+
+
+
         <!--**********************************
             Footer start
         ***********************************-->
-       
+
         <!--**********************************
             Footer end
         ***********************************-->
 
-		
+
 
 
 	</div>
@@ -132,12 +110,12 @@
     <script src="{{asset('admin/vendor/global/global.min.js')}}"></script>
 	<script src="{{asset('admin/vendor/chart.js/Chart.bundle.min.js')}}"></script>
 	<script src="{{asset('admin/vendor/jquery-nice-select/js/jquery.nice-select.min.js')}}"></script>
-	
+
 	<!-- Apex Chart -->
 	<script src="{{asset('admin/vendor/apexchart/apexchart.js')}}"></script>
 	<script src="{{asset('admin/vendor/nouislider/nouislider.min.js')}}"></script>
 	<script src="{{asset('admin/vendor/wnumb/wNumb.js')}}"></script>
-	
+
 	<!-- Dashboard 1 -->
 	<script src="{{asset('admin/js/dashboard/dashboard-1.js')}}"></script>
     <!-- dataTables -->

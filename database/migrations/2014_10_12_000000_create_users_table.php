@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');// Tên người dùng
             $table->string('email')->unique();// email
-            $table->integer('level');// chức vụ . 1 admin, 2 nhà cung cấp, 3 thủ kho, 4 nhà cung cấp
+            $table->integer('level');// chức vụ . 1 admin, 2 nhà cung cấp, 3 thủ kho
             $table->string('phone');// số điện thoại
             $table->string('address'); //địa chỉ
             $table->string('birthday');//ngày sinh

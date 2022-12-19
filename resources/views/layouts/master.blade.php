@@ -25,18 +25,14 @@
    </head>
 
    <body>
-    <!-- Preloader Start -->
-    
-    <!-- Preloader Start -->
-   
-    
+
     @include("layouts.elements.header")
 	<!--/slider-->
-	
-		
+
+
 	@yield('content')
-				
-	
+
+
 	@include("layouts.elements.footer")
 
 
@@ -49,9 +45,9 @@
         });
      </script>
 
-    
+
   <!-- JS here -->
-	
+
 		<!-- All JS Custom Plugins Link Here here -->
         <script src="{{asset('user/assets/js/vendor/modernizr-3.5.0.min.js')}}"></script>
 		<!-- Jquery, Popper, Bootstrap -->
@@ -65,7 +61,7 @@
         <script src="{{asset('user/assets/js/owl.carousel.min.js')}}"></script>
         <script src="{{asset('user/assets/js/slick.min.js')}}"></script>
         <script src="{{asset('user/assets/js/price_rangs.js')}}"></script>
-        
+
 		<!-- One Page, Animated-HeadLin -->
         <script src="{{asset('user/assets/js/wow.min.js')}}"></script>
 		<script src="{{asset('user/assets/js/animated.headline.js')}}"></script>
@@ -75,17 +71,17 @@
         <script src="{{asset('user/assets/js/jquery.scrollUp.min.js')}}"></script>
         <script src="{{asset('user/assets/js/jquery.nice-select.min.js')}}"></script>
 		<script src="{{asset('user/assets/js/jquery.sticky.js')}}"></script>
-        
+
         <!-- contact js -->
         <script src="{{asset('user/assets/js/contact.js')}}"></script>
         <script src="{{asset('user/assets/js/jquery.form.js')}}"></script>
         <script src="{{asset('user/assets/js/jquery.validate.min.js')}}"></script>
         <script src="{{asset('user/assets/js/mail-script.js')}}"></script>
         <script src="{{asset('user/assets/js/jquery.ajaxchimp.min.js')}}"></script>
-        
-		<!-- Jquery Plugins, main Jquery -->	
+
+		<!-- Jquery Plugins, main Jquery -->
         <script src="{{asset('user/assets/js/plugins.js')}}"></script>
         <script src="{{asset('user/assets/js/main.js')}}"></script>
-        
+
     </body>
 </html>

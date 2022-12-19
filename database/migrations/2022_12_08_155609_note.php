@@ -16,15 +16,13 @@ class Note extends Migration
         // bản hiển thị trạng thái nhập và xuất.
         Schema::create('note', function (Blueprint $table) {
             $table->id();
-            $table->integer('code');//mã xuất nhập, 1 xuất xuat+4 số random, nhập nhap+4 random
+            $table->text('code');//mã xuất nhập, 1 xuất xuat+4 số random, nhập nhap+4 random
             $table->integer('id_product');//khóa ngoại
             $table->integer('id_user_create');//nhân viên tạo
             $table->integer('id_user_cc');//nhà cung cấp
             $table->integer('amount');// số lượng
             $table->integer('price'); //tổng số tiền
             $table->integer('status')->default(1); //1 là nhập, 2 xuất
-            $table->timestamp('email_verified_at')->nullable();
-            $table->rememberToken();
             $table->timestamps();
         });
     }
